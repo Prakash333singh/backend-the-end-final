@@ -1,0 +1,11 @@
+{
+  "name": "coder-dost-backend",
+  "version": "1.0.0",
+  "description": "backend the end",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon"
+  },
+  "author": "adhikari",
+  "license": "ISC"
+}
