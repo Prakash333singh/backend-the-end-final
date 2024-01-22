@@ -6,7 +6,7 @@ dotenv.config();
 
 const server = express();
 const cors = require("cors");
-server.use(express.static("build"));
+server.use(express.static(path.resolve(__dirname, process.env.PUBLIC_DIR)));
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/user");
 
@@ -36,7 +36,7 @@ server.use("*", (req, res) => {
 });
 
 // Start server
-server.listen(4000, () => {
+server.listen(process.env.PORT, () => {
   connect();
   console.log("Server started on port 4000");
 });
