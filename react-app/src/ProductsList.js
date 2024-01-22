@@ -8,14 +8,14 @@ const ProductList = () => {
   //const [total, setTotal] = useState(0);
 
   const getProducts = async () => {
-    const res = await axios.get("http://localhost:4000/products");
+    const res = await axios.get("/products");
     console.log(res.data.data);
     setProducts(res.data.data);
     //setTotal(res.data.length);
   };
 
   const handleClick = async (id) => {
-    const res = await axios.delete(`http://localhost:4000/products/${id}`);
+    const res = await axios.delete(`/products/${id}`);
     console.log(res.data);
     if (res.data._id) {
       setProducts(products.filter((p) => p._id !== res.data._id));
