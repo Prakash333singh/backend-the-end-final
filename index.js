@@ -23,6 +23,7 @@ const connect = async () => {
 };
 
 // Body parser
+server.use(morgan("default"));
 server.use(cors());
 server.use(express.json());
 //const PORT = process.env.PORT || 3000;
